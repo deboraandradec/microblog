@@ -4,8 +4,13 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    usuario = {'nome': 'Débora', 'sobrenome': 'Cavalcante'}
-    return render_template('index.html', title='Página Inicial', usuario=usuario)
-@app.route('/contato')
-def contato():
-	return render_template('contato.html', title='Entre em Contato')
+    return render_template('index.html', nome="Débora", sobrenome="Cavalcante")
+@app.route('/outro')       
+def outro():
+    return  '''
+    <html>
+        <body>
+            <h1>outro</h1>
+        </body>
+    </html>
+    '''        
